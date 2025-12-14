@@ -23,6 +23,7 @@ int main () {
 	long request_size = XMaxRequestSize(dpy);
 	unsigned long last_request = XLastKnownRequestProcessed(dpy);
 	unsigned long next_request = XNextRequest(dpy);
+	int protocol_version = XProtocolVersion(dpy);
 
 	printf("You have %d screen/screens\n", XScreenCount(dpy));
 	printf("Your connection number is %d\n", connect_number);
@@ -38,6 +39,7 @@ int main () {
 	printf("Request size %ld\n", request_size);
 	printf("Last request %lu\n", last_request);
 	printf("Next request %lu\n", next_request);
+	printf("Protocol version %d\n", protocol_version);
 
 	XCloseDisplay(dpy);
 
